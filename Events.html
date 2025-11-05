@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+<!-- Events Page Hero Section Start -->
+
+<section class="events_page_herosection">
+  <div class="events_page_herosection_bg">
+    <div class="events_page_herosection_content">
+      <h1>Our Events.</h1>
+      <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Events Page Hero Section Stop -->
+
+
+
+<!-- Home Page Events Section Start  -->
+
+
+<!-- Home Page Events Section Start  -->
+
+<div class="home_pg_events_section_bg">
+
+<section class="home_pg_events_section">
+  <h2>OUR LATEST EVENTS</h2>
+  <p class="section-text">Stay updated with our latest news, stories, and insights on student-led initiatives and community impact.</p>
+
+  <div class="home_pg_blog_grid">
+    <!-- Event Card 1 -->
+    <div class="home_pg_blog_card">
+      <img src="img/goals for gaza1.jpg" alt="Event 1">
+      <div class="content">
+        <h3>Goals for Gaza 2025</h3>
+        <p class="excerpt">With the help of our late parent's inheritance, we have been able to set up a small scale scholarship scheme. This schem...</p>
+        <button onclick="window.location.href='Goals-for-Gaza-2025.html'">Read</button>
+      </div>
+    </div>
+
+    <!-- Event Card 2 -->
+    <div class="home_pg_blog_card">
+      <img src="img/Totes 4 Textbooks 2025.jpg" alt="Event 2">
+      <div class="content">
+        <h3>Totes 4 Textbooks 2025</h3>
+        <p class="excerpt">Many Muslims in the UK dream of a better life in the Middle East, better weather, a chance to experience another culture...</p>
+        <button onclick="window.location.href='Totes-4-Textbooks-2025.html'">Read</button>
+      </div>
+    </div>
+
+    <!-- Event Card 3 -->
+    <div class="home_pg_blog_card">
+      <img src="img/Climb for Change 2025 image gallery 2.png" alt="Event 3">
+      <div class="content">
+        <h3>Climb for Change 2025</h3>
+        <p class="excerpt">Our epic return to our annual Snowdon climb was as successful and bigger than before. Some of our climbers reached the...</p>
+        <button onclick="window.location.href='Climb-for-Change-2025-Event.html'">Read</button>
+      </div>
+    </div>
+
+    <!-- Event Card 4 -->
+    <div class="home_pg_blog_card">
+      <img src="img/event3.jpg" alt="Event 4">
+      <div class="content">
+        <h3>10K Fun Run 2023</h3>
+        <p class="excerpt">Sixteen Foundation work with friends and family to run events and ensure that the fundraisers run smoothly. These volunt...</p>
+        <button onclick="window.location.href='10K-Fun-Run-2023.html'">Read</button>
+      </div>
+    </div>
+
+    <!-- Event Card 5 -->
+    <div class="home_pg_blog_card">
+      <img src="img/Treat So sweet Gallery image 2.png" alt="Event 5">
+      <div class="content">
+        <h3>Treat an Iftar 2021</h3>
+        <p class="excerpt">Sixteen Foundation work with friends and family to run events and ensure that the fundraisers run smoothly. These volunt...</p>
+        <button onclick="window.location.href='Treat-an-Iftar-2021.html'">Read</button>
+      </div>
+    </div>
+
+    <!-- Event Card 6 -->
+    <div class="home_pg_blog_card">
+      <img src="img/Treat So Sweet Header image.png" alt="Event 6">
+      <div class="content">
+        <h3>Treat So Sweet 2021</h3>
+        <p class="excerpt">Sixteen Foundation work with friends and family to run events and ensure that the fundraisers run smoothly. These volunt...</p>
+        <button onclick="window.location.href='Treat-So-Sweet-2021.html'">Read</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<!-- Home Page Events Section Stop -->
+
+
+
+<!-- Home Page Events Section Stop -->
+
+
+
+
+
+
+
+<!-- Footer Start -->
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+<!-- footer stop -->
+
+
+
+
+</body>
+</html>
