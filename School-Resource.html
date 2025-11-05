@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> School Resource | Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>Find School resources. </h1>
+      <p>Every contribution helps restore and improve schools, supports educational programs, local community projects, and outreach initiatives, with transparent reports showing the real impact of your support.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/*  Hero Section start */
+
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/School\ Resource\ header\ image.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+
+
+</style>
+
+
+ <!-- Newsletter Page Hero Section stop  -->
+
+
+
+<!-- We renovate school inner section start -->
+
+
+<section class="student_resource_section_donation_site">
+  <div class="student_resource_section_donation_site_container">
+
+    <!-- Intro -->
+    <div class="student_resource_section_donation_site_intro">
+      <h2 class="student_resource_section_donation_site_title">School Resources</h2>
+      <p class="student_resource_section_donation_site_subtitle">
+        Providing essential resources and tools for schools to enhance learning environments. 
+        Your support equips schools with books, digital materials, and educational kits.
+      </p>
+    </div>
+
+    <!-- Image + Description Row -->
+    <div class="student_resource_section_donation_site_content">
+      <div class="student_resource_section_donation_site_image">
+        <img src="img/School resources image.png" alt="School Resource Project">
+      </div>
+      <div class="student_resource_section_donation_site_text">
+        <h3>Supporting Schools to Empower Students</h3>
+        <p>
+          Many schools lack access to vital learning materials. Our programs ensure every school 
+          receives the resources it needs, from textbooks and stationery to digital tools and libraries.
+        </p>
+        <ul>
+          <li>Provide textbooks, notebooks, and stationery for classrooms.</li>
+          <li>Supply digital learning tools like tablets and educational software.</li>
+          <li>Offer libraries and complete study kits for schools.</li>
+        </ul>
+        <p>
+          With the right resources, schools can create better learning environments, helping students achieve their full potential.  
+          Your contribution makes a tangible difference in educational success.
+        </p>
+        <a href="#" class="student_resource_section_donation_site_btn">Donate Now</a>
+      </div>
+    </div>
+
+    <!-- Impact Section -->
+    <div class="student_resource_section_donation_site_impact">
+      <h3>Our Impact on Schools</h3>
+      <div class="student_resource_section_donation_site_stats">
+        <div class="student_resource_section_donation_site_stat">
+          <h4>500+</h4>
+          <p>Schools Equipped</p>
+        </div>
+        <div class="student_resource_section_donation_site_stat">
+          <h4>10,000+</h4>
+          <p>Students Benefited</p>
+        </div>
+        <div class="student_resource_section_donation_site_stat">
+          <h4>15</h4>
+          <p>Countries Reached</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Styles remain unchanged -->
+<style>
+.student_resource_section_donation_site {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.student_resource_section_donation_site_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.student_resource_section_donation_site_intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.student_resource_section_donation_site_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0b3857;
+  margin-bottom: 20px;
+}
+
+.student_resource_section_donation_site_subtitle {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.student_resource_section_donation_site_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.student_resource_section_donation_site_image {
+  flex: 1 1 45%;
+}
+
+.student_resource_section_donation_site_image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.student_resource_section_donation_site_text {
+  flex: 1 1 50%;
+}
+
+.student_resource_section_donation_site_text h3 {
+  font-size: 24px;
+  color: #0b3857;
+  margin-bottom: 15px;
+}
+
+.student_resource_section_donation_site_text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.student_resource_section_donation_site_text ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.student_resource_section_donation_site_btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #0b3857;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.student_resource_section_donation_site_btn:hover {
+  background-color: #0b3857;
+}
+
+/* Impact section */
+.student_resource_section_donation_site_impact {
+  text-align: center;
+}
+
+.student_resource_section_donation_site_impact h3 {
+  font-size: 28px;
+  color: #0b3857;
+  margin-bottom: 30px;
+}
+
+.student_resource_section_donation_site_stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.student_resource_section_donation_site_stat h4 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b3857;
+  margin-bottom: 10px;
+}
+
+.student_resource_section_donation_site_stat p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .student_resource_section_donation_site_content {
+    flex-direction: column;
+  }
+}
+</style>
+
+
+
+<!-- We build school inner section stop -->
+
+
+
+
+ 
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>
