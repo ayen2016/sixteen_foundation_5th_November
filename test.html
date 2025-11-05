@@ -1,0 +1,285 @@
+<!-- 🌐 Modern Unified Navbar Start -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* --- Base --- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{width:100%;}
+
+/* --- Navbar Wrapper --- */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;
+  background:transparent;padding:15px 0;
+  z-index:1000;transition:background 0.3s ease,box-shadow 0.3s ease;
+}
+.navbar.scrolled{background:#0B3857;box-shadow:0 2px 8px rgba(0,0,0,0.2);}
+.nav-container{max-width:1200px;margin:auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;}
+
+/* --- Logo --- */
+.nav-logo img{width:170px;height:auto;}
+
+/* --- Menu --- */
+.nav-menu{list-style:none;display:flex;align-items:center;gap:25px;}
+.nav-link{
+  color:#e70000;text-decoration:none;font-weight:500;transition:color 0.3s;
+}
+.nav-link:hover{color:#FFD700;}
+
+/* --- Dropdown --- */
+.nav-item{position:relative;}
+.dropdown{
+  position:absolute;top:100%;left:0;background:#0B3857;
+  min-width:180px;opacity:0;visibility:hidden;
+  transform:translateY(10px);transition:all 0.3s;
+  border-radius:8px;
+}
+.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown a{
+  display:block;padding:10px 15px;color:#fff;text-decoration:none;
+}
+.dropdown a:hover{background:#104b75;}
+
+/* --- Buttons --- */
+.donate-btn{
+  background:#FFD700;color:#0B3857;padding:10px 20px;border:none;
+  border-radius:30px;font-weight:600;cursor:pointer;
+}
+.donate-btn:hover{background:#FFC107;}
+
+/* --- Mobile --- */
+.menu-toggle{display:none;font-size:24px;color:#fff;cursor:pointer;}
+@media(max-width:992px){
+  .menu-toggle{display:block;}
+  .nav-menu{
+    position:fixed;top:0;right:-100%;flex-direction:column;
+    background:#fff;width:280px;height:100vh;justify-content:start;
+    padding-top:80px;transition:right 0.3s;
+  }
+  .nav-menu.active{right:0;}
+  .nav-link{color:#0B3857;font-size:18px;}
+  .dropdown{position:static;opacity:1;visibility:visible;transform:none;display:none;}
+  .nav-item.active .dropdown{display:block;background:#f8f9fa;}
+  .dropdown a{color:#0B3857;padding-left:30px;}
+  .donate-btn{margin:20px;}
+}
+
+/* --- Backdrop --- */
+.backdrop{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.5);display:none;z-index:999;
+}
+.backdrop.active{display:block;}
+</style>
+
+<header class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo"><a href="#"><img src="img/SF-Logo-main-300x38-w.png" alt="Logo"></a></div>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="Donation.html" class="nav-link">Cause <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown">
+          <a href="Events.html">Event</a>
+          <a href="#">Volunteer</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="Podcast.html" class="nav-link">Podcast</a></li>
+      <li class="nav-item"><a href="Blog.html" class="nav-link">Blog</a></li>
+      <li><button class="donate-btn" onclick="window.location.href='Donation.html'">Donate Now</button></li>
+    </ul>
+
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+<div class="backdrop"></div>
+
+<script>
+// Scroll effect
+window.addEventListener('scroll',()=>{
+  const nav=document.querySelector('.navbar');
+  nav.classList.toggle('scrolled',window.scrollY>50);
+});
+
+// Elements
+const menu=document.querySelector('.nav-menu');
+const toggle=document.querySelector('.menu-toggle');
+const backdrop=document.querySelector('.backdrop');
+const dropdownLinks=document.querySelectorAll('.nav-item > a');
+
+// Toggle mobile menu
+toggle.addEventListener('click',()=>{
+  menu.classList.toggle('active');
+  backdrop.classList.toggle('active');
+  document.body.style.overflow=menu.classList.contains('active')?'hidden':'';
+});
+backdrop.addEventListener('click',()=>{
+  menu.classList.remove('active');
+  backdrop.classList.remove('active');
+  document.body.style.overflow='';
+});
+
+// Mobile dropdowns
+dropdownLinks.forEach(link=>{
+  link.addEventListener('click',e=>{
+    if(window.innerWidth<=992 && link.nextElementSibling?.classList.contains('dropdown')){
+      e.preventDefault();
+      link.parentElement.classList.toggle('active');
+    }
+  });
+});
+</script>
+<!-- 🌐 Modern Unified Navbar End -->
+
+
+
+<div id="navbar-placeholder"></div>
+<script>
+fetch('navbar.html')
+  .then(res => res.text())
+  .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+  .catch(err => console.error('Navbar failed to load:', err));
+</script>
+
+
+
+
+
+<section class="volunteer-section">
+  <div class="container">
+    <div class="volunteer-wrap">
+      <!-- Text Column -->
+      <div class="volunteer-text">
+        <span class="sub-heading">Join Our Mission</span>
+        <h2>Volunteer & Make a Difference</h2>
+        <p>Become a part of our passionate community of volunteers. Your time, energy, and skills can create meaningful change and inspire others.</p>
+        <a href="/volunteer" class="btn-volunteer">Join Now</a>
+      </div>
+
+      <!-- Image Column -->
+      <div class="volunteer-images">
+        <div class="img-grid">
+          <img src="https://picsum.photos/300/200?random=17" alt="Volunteer 1">
+          <img src="https://picsum.photos/300/200?random=18" alt="Volunteer 2">
+          <img src="https://picsum.photos/300/200?random=19" alt="Volunteer 3">
+          <img src="https://picsum.photos/300/200?random=20" alt="Volunteer 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section */
+.volunteer-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  color: #0B3857;
+  font-family: Arial, sans-serif;
+}
+
+/* Container max-width */
+.volunteer-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flex layout */
+.volunteer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Text Column */
+.volunteer-text {
+  flex: 1 1 500px;
+}
+
+.volunteer-text .sub-heading {
+  display: block;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: #FDB812;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.volunteer-text h2 {
+  font-size: clamp(28px, 3vw, 36px);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.volunteer-text p {
+  font-size: clamp(16px, 2vw, 18px);
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.btn-volunteer {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  background-color: #0B3857;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.btn-volunteer:hover {
+  background-color: #FDB812;
+  color: #0B3857;
+}
+
+/* Image Column */
+.volunteer-images {
+  flex: 1 1 500px;
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.img-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.img-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .volunteer-wrap {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .volunteer-text, .volunteer-images {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .volunteer-text h2 {
+    font-size: clamp(24px, 5vw, 28px);
+  }
+  .volunteer-text p {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+}
+</style>

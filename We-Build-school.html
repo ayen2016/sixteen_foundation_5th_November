@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>We Build School | Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+<!-- Blog Page Hero Section Start -->
+
+<section class="newsletter_page_hero">
+  <div class="newsletter_page_hero_bg">
+    <div class="newsletter_page_hero_content">
+      <h1>We Build School</h1>
+      <p>Every Contribution Supports Educational Programmes, Local Projects, and Outreach, with Transparent Reports Showing the Real Impact of Your Support</p>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+
+
+/*  Hero Section start */
+
+.newsletter_page_hero {
+  width: 100%;
+  background-color: #ffffff; 
+}
+
+.newsletter_page_hero_bg {
+  margin: 0 auto;
+  padding: 200px 20px; /* top and bottom spacing */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/We\ Build\ School\ hero\ image.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter_page_hero_content h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.newsletter_page_hero_content p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 36px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter_page_hero_content h1 {
+    font-size: 28px;
+  }
+  .newsletter_page_hero_content p {
+    font-size: 16px;
+  }
+  .newsletter_page_hero_bg {
+    padding: 90px 15px;
+  }
+}
+
+
+</style>
+
+
+ <!-- Newsletter Page Hero Section stop  -->
+
+
+
+<!-- We build school inner section start -->
+
+
+<section class="build_school_section_donation_site">
+  <div class="build_school_section_donation_site_container">
+
+    
+    <div class="build_school_section_donation_site_intro">
+      <h2 class="build_school_section_donation_site_title">Build a School</h2>
+      <p class="build_school_section_donation_site_subtitle">
+        Together, we can create spaces where dreams take shape and futures are built. 
+        Every brick you contribute brings us closer to giving children a place to learn, grow, and thrive.
+      </p>
+    </div>
+
+   
+    <div class="build_school_section_donation_site_content">
+      <div class="build_school_section_donation_site_image">
+        <img src="img/We Build School 450 by 350 .png" alt="Build a School Project">
+      </div>
+      <div class="build_school_section_donation_site_text">
+        <h3>Building Hope, One Classroom at a Time</h3>
+        <p>
+          Access to education begins with access to a safe, welcoming school. 
+          Our Build a School initiative focuses on constructing classrooms in underserved communities, 
+          ensuring every child has the opportunity to learn in a secure and inspiring environment.
+        </p>
+        <ul>
+          <li>Construct sustainable and weather-resistant classrooms.</li>
+          <li>Include clean water facilities and sanitation systems.</li>
+          <li>Furnish schools with desks, boards, and learning materials.</li>
+        </ul>
+        <p>
+          Your contribution directly supports the foundation of education — both literally and figuratively.  
+          Help us lay the groundwork for brighter futures.
+        </p>
+        <a href="#" class="build_school_section_donation_site_btn">Donate Now</a>
+      </div>
+    </div>
+
+  
+    <div class="build_school_section_donation_site_impact">
+      <h3>Our Impact So Far</h3>
+      <div class="build_school_section_donation_site_stats">
+        <div class="build_school_section_donation_site_stat">
+          <h4>25+</h4>
+          <p>Schools Built</p>
+        </div>
+        <div class="build_school_section_donation_site_stat">
+          <h4>12,000+</h4>
+          <p>Students Benefited</p>
+        </div>
+        <div class="build_school_section_donation_site_stat">
+          <h4>8</h4>
+          <p>Countries Reached</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+.build_school_section_donation_site {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.build_school_section_donation_site_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.build_school_section_donation_site_intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.build_school_section_donation_site_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0b3857;
+  margin-bottom: 20px;
+}
+
+.build_school_section_donation_site_subtitle {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.build_school_section_donation_site_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.build_school_section_donation_site_image {
+  flex: 1 1 45%;
+}
+
+.build_school_section_donation_site_image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.build_school_section_donation_site_text {
+  flex: 1 1 50%;
+}
+
+.build_school_section_donation_site_text h3 {
+  font-size: 24px;
+  color: #0b3857;
+  margin-bottom: 15px;
+}
+
+.build_school_section_donation_site_text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.build_school_section_donation_site_text ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.build_school_section_donation_site_btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #0b3857;
+  color: #fff;
+  text-decoration: none;
+  /* border-radius: 6px; */
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.build_school_section_donation_site_btn:hover {
+  background-color: #0b3857;
+}
+
+/* Impact section */
+.build_school_section_donation_site_impact {
+  text-align: center;
+}
+
+.build_school_section_donation_site_impact h3 {
+  font-size: 28px;
+  color: #0b3857;
+  margin-bottom: 30px;
+}
+
+.build_school_section_donation_site_stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.build_school_section_donation_site_stat h4 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b3857;
+  margin-bottom: 10px;
+}
+
+.build_school_section_donation_site_stat p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .build_school_section_donation_site_content {
+    flex-direction: column;
+  }
+}
+
+
+
+</style>
+
+
+<!-- We build school inner section stop -->
+
+
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+</body>
+</html>

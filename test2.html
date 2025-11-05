@@ -1,0 +1,76 @@
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content-wrapper">
+
+      <!-- Text Content -->
+      <div class="hero-text">
+        <span class="subheading">About Charitian</span>
+        <h2>Together, We Make <br>A Difference!</h2>
+        <p>Charitable giving as a religious act or duty is referred to as alms. The name stems from the most obvious expression of the virtue of charity, giving the recipients of it the means they need to survive.</p>
+        <a href="#" class="btn-primary">Make a Donation</a>
+      </div>
+
+      <!-- Image Collage -->
+      <div class="hero-image-collage">
+        <div class="collage-item collage-circle">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=400&fit=crop" alt="">
+        </div>
+        <div class="collage-item collage-rectangle">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=500&fit=crop" alt="">
+        </div>
+        <div class="collage-item collage-square">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400&h=400&fit=crop" alt="">
+        </div>
+        <div class="decorative-circle"></div>
+        <div class="decorative-square"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: Arial, sans-serif; line-height:1.6; }
+
+  .hero-section { padding: 80px 20px; background-color: #fff; }
+  .container { max-width: 1200px; margin:0 auto; }
+
+  .hero-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  /* Text */
+  .hero-text { text-align: left; }
+  .hero-text .subheading { color:#ff7b54; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:15px; display:inline-block; }
+  .hero-text h2 { font-size:48px; font-weight:700; margin-bottom:20px; color:#1a1a1a; line-height:1.2; }
+  .hero-text p { font-size:18px; color:#666; margin-bottom:30px; line-height:1.8; }
+  .btn-primary { display:inline-block; padding:16px 40px; background: linear-gradient(135deg,#2a9d8f,#2ab5a5); color:#fff; text-decoration:none; border-radius:8px; font-weight:600; font-size:16px; transition: all 0.3s ease; }
+  .btn-primary:hover { transform: scale(1.05); background: linear-gradient(135deg,#248a7f,#2a9d8f); }
+
+  /* Image Collage */
+  .hero-image-collage { position: relative; height:500px; }
+  .collage-item { position: absolute; overflow:hidden; transition: all 0.3s ease; }
+  .collage-item:hover { transform: scale(1.05); z-index:100; }
+  .collage-item img { width:100%; height:100%; object-fit:cover; }
+
+  .collage-circle { top:0; left:0; width:192px; height:192px; border-radius:50%; box-shadow:0 4px 12px rgba(42,157,143,0.15); z-index:30; }
+  .collage-rectangle { top:64px; right:0; width:256px; height:288px; border-radius:24px; box-shadow:0 4px 12px rgba(255,123,84,0.15); z-index:20; }
+  .collage-square { bottom:0; left:48px; width:224px; height:224px; border-radius:16px; box-shadow:0 4px 12px rgba(42,157,143,0.15); z-index:40; }
+
+  .decorative-circle { position:absolute; top:96px; left:128px; width:160px; height:160px; border-radius:50%; background:rgba(42,157,143,0.1); z-index:1; }
+  .decorative-square { position:absolute; bottom:64px; right:96px; width:192px; height:192px; border-radius:16px; background:linear-gradient(135deg,rgba(42,157,143,0.1),rgba(255,123,84,0.1)); z-index:1; }
+
+  /* Responsive */
+  @media(max-width:768px){
+    .hero-content-wrapper { grid-template-columns: 1fr; gap:40px; }
+    .hero-text h2 { font-size:36px; }
+    .hero-image-collage { height:400px; }
+    .collage-circle { width:140px; height:140px; }
+    .collage-rectangle { width:180px; height:220px; }
+    .collage-square { width:160px; height:160px; }
+  }
+</style>

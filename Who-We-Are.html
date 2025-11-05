@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sixteen Foundation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+ 
+<!-- Navbar start -->
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Now load the JS after HTML is in the DOM
+      const script = document.createElement('script');
+      script.src = "header.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+<!-- Navbar stop -->
+
+
+
+<!-- About Page Hero Section Start -->
+
+
+<section class="about_page_hero_section">
+  <div class="about_page_hero_section_bg">
+    <div class="about_page_hero_section_content">
+      <h1>We Collect Donation for Students.</h1>
+      <p>Explore our latest stories, insights, and updates on student-led initiatives and community impact. Stay inspired and informed with our blog posts.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- About Page Hero Section Stop -->
+
+
+
+<!-- About Page About Us Section Start -->
+
+
+ <section class="about_us_section">
+    <!-- Heading -->
+    <div class="about_us_heading">
+      <h2>Our Story</h2>
+
+       <p>
+
+        The Prophet Muhammad (PBUH) said: <br> “The believer’s shade on the Day of Resurrection will be his charity.” (At-Tirmidhi)
+
+      </p>
+
+
+      <p>Founded in 2020, we are Sixteen Foundation: a Community Organisation set up in commemoration of our late parents. They immigrated from Bangladesh to the UK in the 60s in order to continue to receive an education, but one that would lead to far better opportunities in life. Our parents raised their 16 children with their Islamic faith, to work hard and be good to people. Our mother lost her battle to cancer before she could even taste the fruits of her hardship, and our father continued to grieve in her loss until he passed away in later life. It was their hard-earned success, that led to setting up this foundation in their memory.</p>
+
+     
+    </div>
+
+    <!-- Media Gallery -->
+    <div class="about_us_gallery">
+      <div class="about_us_card">
+        <img src="img/hero image new.jpg" alt="Team working together">
+      </div>
+      <div class="about_us_card">
+        <img src="img/sixteen foundation blog 1.jpg" alt="Office environment">
+      </div>
+      <div class="about_us_card">
+        <img src="img/thumbnil.jpg" alt="Creative brainstorming">
+      </div>
+    </div>
+
+     <div class="about_us_heading_2nd">
+      <h2>About Us</h2>
+      <p>
+        
+        Supporting young people and their education was a no brainer and immediately became the focus of our causes. There was an urge to create something that would immediately impact the receiver. In our case, it was educational establishments in need. It quickly became very apparent that we weren't just helping to buy resources but changing the entire dynamics of a community. Through our foundation, we hope to build stronger relationships with our community of volunteers, engage in long term partnerships with educational establishments and ultimately continue the legacy of our late parents. They remain at the heart of our foundation, and we are forever indebted to them.
+
+      </p>
+    </div>
+
+
+  </section>
+
+
+
+<!-- About Page About Us Section Stop -->
+
+
+
+
+<!-- Footer Start -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+
+
+
+
+<!-- footer stop -->
+
+
+
+</body>
+</html>
+
+
+
+
